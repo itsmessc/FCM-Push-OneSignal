@@ -1,1 +1,1 @@
-This repo is to send notifications using OneSignal
+This repo is to send push notifications using OneSignal
