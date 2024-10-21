@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Initialize OneSignal client
-const client = new OneSignal.Client('50819b17-1490-4961-a720-0cde5db593b2','OGIxNWY1YjUtMTJjOS00YmFjLWIwNTItMGQ5NjRjMjdlYjNi');
+const client = new OneSignal.Client('******','******');
 
 app.post('/helloj',async (req,res)=>{
   const notification = {
@@ -42,7 +42,7 @@ app.post('/send-notification', async (req, res) => {
   }
 
   const notification = {
-    app_id: '50819b17-1490-4961-a720-0cde5db593b2', // Explicitly add the app_id here
+    app_id: '********', // Explicitly add the subscription_id here
     headings: { en: title },
     contents: { en: message },
     include_player_ids: [playerId],
@@ -52,7 +52,7 @@ app.post('/send-notification', async (req, res) => {
     const response = await client.createNotification(notification, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic OGIxNWY1YjUtMTJjOS00YmFjLWIwNTItMGQ5NjRjMjdlYjNi` // Replace with your OneSignal REST API Key
+        'Authorization': `Basic *******` // Replace with your OneSignal REST API Key
       }
     });
     console.log('Notification sent successfully:', response);
