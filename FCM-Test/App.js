@@ -4,11 +4,11 @@ import { OneSignal } from 'react-native-onesignal';
 import axios from 'axios';
 
 export default function App() {
-  const [playerId, setPlayerId] = useState('aa0d050f-9ee1-44ca-9056-dfb526687eeb');
+  const [playerId, setPlayerId] = useState('***********');
 
   useEffect(() => {
     // OneSignal Initialization
-    OneSignal.initialize('50819b17-1490-4961-a720-0cde5db593b2'); // Replace with your OneSignal App ID
+    OneSignal.initialize('***********'); // Replace with your OneSignal App ID
 
     // Request permission for notifications
     OneSignal.Notifications.requestPermission(true);
@@ -42,7 +42,7 @@ export default function App() {
     }
 
     const notificationData = {
-      app_id: "50819b17-1490-4961-a720-0cde5db593b2", // Your OneSignal App ID
+      app_id: "***********", // Your OneSignal App ID
       contents: { en: "Hello from OneSignal!" }, // Notification message
       included_segments: ["All"], // Send to all users
       headings: { en: "MIC testing Notification" }, // Notification title
